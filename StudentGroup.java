@@ -64,7 +64,7 @@ public class StudentGroup implements StudentArrayOperation {
 				students[index]=student;
 		}
 		catch(IllegalArgumentException te)
-		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -107,7 +107,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -131,7 +131,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
@@ -150,7 +150,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -176,7 +176,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("Student not found in ther array");
+		      Sytem.out.println("Student not found in ther array");
 
 	}
 
@@ -198,12 +198,12 @@ public class StudentGroup implements StudentArrayOperation {
 				  }
 				}
 				   if(flag==0)
-					   throw IllegalArgumentException;
+					   throw new IllegalArgumentException();
 			}
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.printlmn("Student not found in ther array");
+		      Sytem.out.println("Student not found in ther array");
 
 	}
 
@@ -225,8 +225,15 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void bubbleSort() {
 		int i,j;
-		fotr(i=0;i<students.length;i++){
-			for(j=0;j<students.length)
+		students temp;
+		for(i=0;i<students.length;i++){
+			for(j=i;j<students.length-1;j++) {
+				if(students[i]>students[j]) {
+					temp=students[i];
+					students[i]=students[j];
+					students[j]=temp;
+				}
+			}
 		}
 	}
 
