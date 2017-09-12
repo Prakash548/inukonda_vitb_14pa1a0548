@@ -13,6 +13,8 @@ import java.util.Date;
  */
 public class StudentGroup implements StudentArrayOperation {
 
+	private static final Exception IllegalArgumentException = null;
+	private static final Student[] NULL = null;
 	private Student[] students;
 	
 	/**
@@ -25,54 +27,184 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		// Add your implementation here
-		return null;
+		
+		return students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		// Add your implementation here
+		try{
+			if(students==NULL)
+                throw new IllegalArgumentException();
+		}
+		catch(IllegalArgumentException te)
+		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+				
 	}
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
-		return null;
+			try{
+				if(index<0 || index>students.length)
+	                throw new IllegalArgumentException();
+				else
+					return students[index];
+			}
+			catch(IllegalArgumentException le)
+			      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+					
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
-		// Add your implementation here
+		try{
+			if((index<0 || index>students.length)||student==null)
+                throw new IllegalArgumentException();
+			else
+				students[index]=student;
+		}
+		catch(IllegalArgumentException te)
+		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
 	public void addFirst(Student student) {
-		// Add your implementation here
+		Student temp,ktemp;
+		int i;
+		try{
+			if((student==null)
+                throw new IllegalArgumentException();
+			else {
+					temp=students[0];
+					students[0]=student;
+					for(i=1;i<=students.length;i++) {
+                        ktemp=students[i];   
+						students[i]=temp;
+                           temp=ktemp;
+					}
+				
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		Student temp,ktemp;
+		int i;
+		try{
+			if((student==null)
+                throw new IllegalArgumentException();
+			else {
+				i=students.length;
+					students[i+1]=student;
+				
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		// Add your implementation here
+		Student temp,ktemp;
+		int i;
+		try{
+			if((index<0 || index>students.length)||student==null)
+                throw new IllegalArgumentException();
+			else {
+					temp=students[index];
+					students[index]=student;
+					for(i=index;i<=students.length;i++) {
+						ktemp=students[index+i];
+						students[index+i]=temp;
+						temp=ktemp;
+					}
+				
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
 	public void remove(int index) {
-		// Add your implementation here
+		Student temp,ktemp;
+		int i;
+		try{
+			if((index<0 || index>students.length)||student==null)
+                throw new IllegalArgumentException();
+			else {
+				for(i=index;i<students.length;i++) {
+						students[index]=students[index+1];
+				}
+				
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("An Illegal argument(array out of bound) exception occurs.");
+
 	}
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		Student temp,ktemp;
+		int i,j,flag=0;
+		try{
+			if((student==null)
+                throw new IllegalArgumentException();
+			else {
+				   for(i=0;i<=students.length;i++) {
+					   if(students[i]==student) {
+						   for(j=i;i<students.length;j++) {
+								students[j]=students[j+1];
+								flag=1;
+					   }
+				  }
+				}
+				   if(flag==0)
+					   throw new IllegalArgumentException();
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("Student not found in ther array");
+
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		Student temp,ktemp;
+		int i,j,flag=0;
+		try{
+			if(((index==null)||())
+                throw IllegalArgumentException;
+			else {
+				   for(i=0;i<=students.length;i++) {
+					   if(students[i]==student) {
+						   for(j=i;i<students.length;j++) {
+								students[j]=students[j+1];
+								flag=1;
+					   }
+				  }
+				}
+				   if(flag==0)
+					   throw IllegalArgumentException;
+			}
+				
+		}
+		catch(IllegalArgumentException le)
+		      Sytem.out.printlmn("Student not found in ther array");
+
 	}
 
 	@Override
@@ -92,7 +224,10 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
-		// Add your implementation here
+		int i,j;
+		fotr(i=0;i<students.length;i++){
+			for(j=0;j<students.length)
+		}
 	}
 
 	@Override
