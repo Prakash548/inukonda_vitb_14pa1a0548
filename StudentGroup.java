@@ -72,7 +72,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student temp,ktemp;
 		int i;
 		try{
-			if((student==null)
+			if(student==null)
                 throw new IllegalArgumentException();
 			else {
 					temp=students[0];
@@ -139,7 +139,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student temp,ktemp;
 		int i;
 		try{
-			if((index<0 || index>students.length)||student==null)
+			if((index<0 || index>students.length)||(student==null))
                 throw new IllegalArgumentException();
 			else {
 				for(i=index;i<students.length;i++) {
@@ -186,7 +186,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student temp,ktemp;
 		int i,j,flag=0;
 		try{
-			if(((index==null))
+			if(index== 0)
                 throw IllegalArgumentException;
 			else {
 				   for(i=0;i<=students.length;i++) {
@@ -209,18 +209,38 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromElement(Student student) {
-		// Add your implementation here
+		int i=0;
+		for(i=0;i<students.length;i++) {
+			if(students[i]==student)
+				break;
+		}
+		for(;i<students.length;i++) {
+			students[i]=null;
+		}
 		
 	}
 
 	@Override
 	public void removeToIndex(int index) {
-		// Add your implementation here
+		for(i=0;i<students.length;i++) {
+			if(i==index)
+				break;
+		}
+		for(;i<students.length;i++) {
+			students[i]=null;
+		}
 	}
 
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+		for(i=0;i<students.length;i++) {
+			if(students[i]==student)
+				break;
+		}
+		for(j=0;j<i;j++) {
+			students[j]=null;
+		}
 	}
 
 	@Override
