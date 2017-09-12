@@ -38,7 +38,7 @@ public class StudentGroup implements StudentArrayOperation {
                 throw new IllegalArgumentException();
 		}
 		catch(IllegalArgumentException te)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 				
 	}
 
@@ -51,7 +51,7 @@ public class StudentGroup implements StudentArrayOperation {
 					return students[index];
 			}
 			catch(IllegalArgumentException le)
-			      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+			      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 					
 	}
 
@@ -64,7 +64,7 @@ public class StudentGroup implements StudentArrayOperation {
 				students[index]=student;
 		}
 		catch(IllegalArgumentException te)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -107,7 +107,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -131,7 +131,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 	}
 
 	@Override
@@ -150,7 +150,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("An Illegal argument(array out of bound) exception occurs.");
+		      System.out.println("An Illegal argument(array out of bound) exception occurs.");
 
 	}
 
@@ -176,7 +176,7 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("Student not found in ther array");
+		      System.out.println("Student not found in ther array");
 
 	}
 
@@ -186,7 +186,7 @@ public class StudentGroup implements StudentArrayOperation {
 		Student temp,ktemp;
 		int i,j,flag=0;
 		try{
-			if(((index==null)||())
+			if(((index==null))
                 throw IllegalArgumentException;
 			else {
 				   for(i=0;i<=students.length;i++) {
@@ -203,13 +203,14 @@ public class StudentGroup implements StudentArrayOperation {
 				
 		}
 		catch(IllegalArgumentException le)
-		      Sytem.out.println("Student not found in ther array");
+		      System.out.println("Student not found in ther array");
 
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
 		// Add your implementation here
+		
 	}
 
 	@Override
